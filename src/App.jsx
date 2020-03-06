@@ -5,9 +5,10 @@ import { Provider } from 'react-redux';
 import {Switch, Route, BrowserRouter } from 'react-router-dom';
 import BaseLayout from './containers/BaseLayout';
 import {createStore} from 'redux';
-import reducer from './store/reducers/reducer';
+import rootReducer from './store/reducers/rootReducer';
+import ConfirmPositions from './containers/ConfirmPositions';
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 const App = function() {
   return (
@@ -17,6 +18,7 @@ const App = function() {
           <BaseLayout>
             <Route exact path="/" component={Home} />
             <Route exact path="/createPosition" component={CreatePosition} />
+            <Route exact path="/confirmPositions" component={ConfirmPositions} />
           </BaseLayout>
         </Switch>
       </BrowserRouter>

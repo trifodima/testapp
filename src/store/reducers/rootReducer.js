@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
-import newsReducer from './newsReducer';
-import userReducer from './userReducer';
-
+import positionsReducer from './positionsReducer';
 import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
-  newsReducer,
-  userReducer,
+  positionsReducer,
   form: formReducer,
 });

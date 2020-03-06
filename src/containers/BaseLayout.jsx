@@ -1,31 +1,21 @@
-import React, { Component } from 'react';
-// import './BaseLayout.scss';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Container, Col, Row } from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-class BaseLayout extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Container>
-          <Row>
-            <Col xs={12}>
-              <main>{this.props.children}</main>
-            </Col>
-          </Row>
-        </Container>
-        <Footer />
-      </div>
-    );
-  }
-}
-const mapStateToProps = (state) => {
-  return {
+const BaseLayout = (props) => (
+  <div>
+    <Header />
+    <Container>
+      <Row>
+        <Col xs={12}>
+          <main>{props.children}</main>
+        </Col>
+      </Row>
+    </Container>
+    <Footer />
+  </div>
+);
 
-  }
-};
-
-export default connect(mapStateToProps)(BaseLayout);
+export default connect()(BaseLayout);

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div style={{height: '60px'}}>
-      Header
+    <div className="header">
+      <h3>Header</h3>
     </div>
   );
 };
